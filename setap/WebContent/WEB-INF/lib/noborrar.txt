@@ -1,0 +1,38 @@
+IMPORTANTE, acerca de los JARS:
+===============================
+
+La biblioteca org.springframework.context.support-3.0.4.RELEASE.jar contiene el vínculo
+contra javax.mail y permite el envío de mails a instancias del spring.
+
+Los JARS base para usar SPRING framework serían:
+commons-logging-1.0.4.jar
+aopalliance.jar
+aspectjrt-1.5.2.jar
+standard.jar
+org.springframework.aop-3.0.4.RELEASE.jar
+org.springframework.asm-3.0.4.RELEASE.jar
+org.springframework.beans-3.0.4.RELEASE.jar
+org.springframework.context.support-3.0.4.RELEASE.jar
+org.springframework.context-3.0.4.RELEASE.jar
+org.springframework.core-3.0.4.RELEASE.jar
+org.springframework.expression-3.0.4.RELEASE.jar
+org.springframework.web.servlet-3.0.4.RELEASE.jar
+org.springframework.web-3.0.4.RELEASE.jar
+
+Además para las herramientas que suelo usar:
+jstl.jar
+sitemesh-3.0-alpha-2.jar
+mailapi.jar
+commons-fileupload-1.2.jar
+
+Para el uso de aspectos
+=======================
+En el applicationContext.xml:
+<aop:aspectj-autoproxy proxy-target-class="true" />
+Y sus respectivos jars para que funcione:
+aspectjrt-1.5.2.jar
+aspectjweaver-1.6.8.jar
+cglib-nodep-2.2.2.jar
+
+
+

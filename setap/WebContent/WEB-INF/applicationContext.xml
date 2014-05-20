@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<!-- <context:property-placeholder location="classpath:sitio.properties"/>
+ 	-->
+ 	
+	<context:component-scan base-package="controllers" />
+	<context:component-scan base-package="admincontrollers" />
+	<context:component-scan base-package="etap.servicios" />
+ 
+	<mvc:annotation-driven />
+
+	<!-- para las annotations de aspectos -->			 
+	<aop:aspectj-autoproxy proxy-target-class="true" />	
+	<bean id="loginadminvalidator" class="etap.authentication.LoggedAdminValidator" />
+
+			
+	<!-- Marco al spring paginas de error por tipo de excepción -->
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">publico/error</prop>
+				<prop key="java.lang.Error">publico/error</prop>				
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="MiviewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView">
+		</property>
+		<property name="prefix">
+			<value>/WEB-INF/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+		<property name="requestContextAttribute" value="rc" />
+		<property name="exposeContextBeansAsAttributes" value="true" />
+		<property name="order" value="2" />
+	</bean>
+	
+	
+</beans>
