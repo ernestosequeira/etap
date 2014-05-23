@@ -15,13 +15,10 @@
 	
 	<h5>Estados</h5>
 	<table>
-		<tr>Nombres: 
-		<td>
 			<c:forEach var="i" begin="0" end="1">
   				 <c:out value="${Estados[i].nombre}"/>
 			</c:forEach>
-		</td>
-		</tr>
+
 	</table>
 	
 	<%@ include file="../plantillas/footer.jspf"%>
