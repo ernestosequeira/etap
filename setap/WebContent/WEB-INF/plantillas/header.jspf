@@ -2,14 +2,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href='${rc.contextPath}/css/normalize.css' type="text/css" />
 <link rel="stylesheet" href='${rc.contextPath}/css/foundation.css' type="text/css" />
 <link rel="stylesheet" href='${rc.contextPath}/css/default.css' type="text/css" />
 
-<script type="text/javascript" src="${rc.contextPath}/js/jquery.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/vendor/modernizr.js"></script>
 
-<script type="text/javascript" src="${rc.contextPath}/js/modernizr.js"></script>
 
-<script type="text/javascript" src="${rc.contextPath}/js/foundation.min.js"></script>
-
-<script type="text/javascript" src="${rc.contextPath}/js/fastclick.js"></script>
+ <script>
+    $(document).foundation();
+  </script>

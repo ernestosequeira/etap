@@ -5,3 +5,10 @@
 <hr>
 <span>Copyright</span>
  
+<script type="text/javascript" src="${rc.contextPath}/js/vendor/jquery.js"></script>
+ 
+<script type="text/javascript" src="${rc.contextPath}/js/foundation.min.js"></script>
+ 
+<script>
+	$(document).foundation();
+</script>

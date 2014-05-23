@@ -23,6 +23,7 @@
 			console.info('cargado');
 		});
 	</script>
+
 	<%@ include file="plantillas/footer.jspf"%>
 </body>
 </html>

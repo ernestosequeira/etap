@@ -1,6 +1,8 @@
 
+
 <div class="fixed">
-<nav class="top-bar" data-topbar data-options="sticky_on: large">
+
+<nav class="top-bar" data-topbar data-options="is_hover: false">
   <ul class="title-area">
     <li class="name">
       <h1><a href="#">My Site</a></h1>
@@ -10,14 +12,14 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active"><a href="#">Right Button Active</a></li>
+      <li class="active"><a href="#">Usuario</a></li>
       <li class="has-dropdown">
         <a href="#">Right Button Dropdown</a>
         <ul class="dropdown">
           <li><a href="#">First link in dropdown</a></li>
         </ul>
       </li>
-    </ul>
+    </ul> 
 
     <!-- Left Nav Section -->
     <ul class="left">
@@ -25,5 +27,6 @@
       <li><a href="${rc.contextPath}/adm/admin">Administraci&oacute;n</a></li>
     </ul>
   </section>
+  
 </nav>
 </div>
