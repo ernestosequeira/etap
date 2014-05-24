@@ -25,11 +25,11 @@ public class EspecificacionTecnica{
 			this.cantidad = cantidad;
 		}
 
-		public String getCod_etap() {
+		public String getCodEtap() {
 			return cod_etap;
 		}
 
-		public void setCod_etap(String cod_etap) {
+		public void setCodEtap(String cod_etap) {
 			this.cod_etap = cod_etap;
 		}
 
